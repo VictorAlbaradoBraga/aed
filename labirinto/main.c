@@ -1,11 +1,22 @@
+/*
+    Integrantes de equipe:
+
+    Nome: Victor Albarado Braga - Matrícula: 2115310065;
+    Nome: Mateus Bastos Magalhães Mar - Matrícula: 2215310063.
+
+    Curso: Sistemas de Informação
+*/
+
 #include "labirinto.h"
 #include <stdio.h>
 
-int main() {
+int main(int argc, char *argv[]) 
+{
     int labirinto[SIZE][SIZE];
 
     // Ler o labirinto do arquivo
-    if (!ler_labirinto("labirinto.txt", labirinto)) {
+    if (!ler_labirinto("labirinto.txt", labirinto)) 
+    {
         return 1;
     }
 
@@ -14,10 +25,13 @@ int main() {
     imprimir_labirinto(labirinto);
 
     // Tentar encontrar o caminho
-    if (encontrar_caminho(labirinto, 0, 0)) {
+    if (encontrar_caminho(labirinto, 0, 0)) 
+    {
         printf("\nLabirinto solucionado:\n");
         imprimir_labirinto(labirinto);
-    } else {
+    } 
+    else 
+    {
         printf("\nLabirinto nao possui solucao.\n");
     }
 
